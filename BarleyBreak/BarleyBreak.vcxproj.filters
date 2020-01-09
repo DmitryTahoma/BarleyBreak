@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{fffb687b-8174-4c37-ad37-d988fb50e97e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{ae38b7b4-965c-4e8e-8190-caa043775d32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{fa43d109-cda6-4ffc-acf2-272d02723899}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="settings.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="area.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="playerControl.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="setOfWords.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="areaStream.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="program.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="settings.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="area.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="playerControl.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="setOfWords.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboardCodes.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="areaStream.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="program.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
