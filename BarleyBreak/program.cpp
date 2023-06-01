@@ -136,9 +136,11 @@ void program::play()
 {
 	if (p->launchControl())
 	{
+		mainMenu->removeItem(Settings->getSetOfWords("MainMenuItem1"));
+		mainMenu->addItem(Settings->getSetOfWords("MainMenuItem1"), 0);
 		mainMenu->removeItem(Settings->getSetOfWords("MainMenuNewItem"));
 		mainMenu->removeItem(Settings->getSetOfWords("MainMenuItem1Updated"));
-		mainMenu->addItem(Settings->getSetOfWords("MainMenuItem1"));
+		mainMenu->removeItem(Settings->getSetOfWords("MainMenuNewItem"));
 	}
 }
 
