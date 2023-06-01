@@ -9,13 +9,13 @@ area::area()
 	for (int i = 0; i < 4; ++i)
 		items[i] = new short[4];
 
-	short *counter = new short(-1);
+	short *counter = new short(0);
 	for (int i = 0; i < 4; ++i)
 		for (int j = 0; j < 4; ++j)
-			items[i][j] = ++*counter;
+			items[i][j] = ++*counter % 16;
 	delete counter;
 
-	mixMe(new unsigned int(32));
+	mixMe(new unsigned int(256));
 }
 
 area::area(string filePath)
@@ -34,20 +34,26 @@ area::~area()
 
 void area::mixMe(unsigned int *countMixing)
 {
+	int x = 3, y = 3;
 	for (int i = 0; i < (int)*countMixing; ++i)
 	{
-		short *firstX = new short(rand() % 4);
-		short *firstY = new short(rand() % 4);
-		short *secondX = new short(rand() % 4);
-		short *secondY = new short(rand() % 4);
+		short dir = rand() % 4;
+		int x2 = x;
+		int y2 = y;
+		switch (dir)
+		{
+			default: ++x2; break;
+			case 1: --x2; break;
+			case 2: ++y2; break;
+			case 3: --y2; break;
+		}
 
-		if (*firstX != *secondX && *firstY != *secondY)
-			swap(items[*firstX][*firstY], items[*secondX][*secondY]);
-
-		delete firstX;
-		delete firstY;
-		delete secondX;
-		delete secondY;
+		if (x2 >= 0 && x2 < 4 && y2 >= 0 && y2 < 4)
+		{
+			swap(items[x][y], items[x2][y2]);
+			x = x2;
+			y = y2;
+		}
 	}
 	delete countMixing;
 }
