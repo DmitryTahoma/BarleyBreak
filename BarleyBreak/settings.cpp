@@ -232,6 +232,7 @@ void settings::createAssotiations()
 	setsAssociations[31] = "GetterNameOfSave";
 	setsAssociations[32] = "ErrorMsgNameOfSave";
 	setsAssociations[33] = "SaveCompleted";
+	setsAssociations[34] = "WinCongratulation";
 }
 
 string settings::getSetOfWords(string key)

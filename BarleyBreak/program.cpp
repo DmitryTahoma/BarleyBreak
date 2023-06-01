@@ -136,6 +136,8 @@ void program::play()
 {
 	if (p->launchControl())
 	{
+		cout << Settings->getSetOfWords("WinCongratulation") << endl;
+		system("pause");
 		mainMenu->removeItem(Settings->getSetOfWords("MainMenuItem1"));
 		mainMenu->addItem(Settings->getSetOfWords("MainMenuItem1"), 0);
 		mainMenu->removeItem(Settings->getSetOfWords("MainMenuNewItem"));
