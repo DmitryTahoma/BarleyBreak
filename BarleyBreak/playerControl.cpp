@@ -59,7 +59,15 @@ void playerControl::save(string getterNameOfSave, string errorMsgNameOfSave, str
 		*correctInput = true;
 		for (int i = 0; i < 10; ++i)
 		{
-			*correctInput = nameOfSave.find(forbiddenSymb[i]) == (pow(2, 32) - 1);
+			for (auto& symb : nameOfSave)
+			{
+				if (symb == forbiddenSymb[i])
+				{
+					*correctInput = false;
+					break;
+				}
+			}
+
 			if (!*correctInput)
 			{
 				cout << errorMsgNameOfSave << endl;
